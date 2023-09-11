@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WmrAG9YwVxsU5kCLadgeVtw8Apa5teADMjX7ZJgjFBzbmjY0CP88cReKxHWCDRdwSuIu0OSNmwqmxYf0CjKMdA==",
+  "dgSpecHash": "X+X0AUR0lVTF53wekiSHkpL6IBazaN1+wlfXbntaSnrH6vTL5H3xumCRwg9QaG2Hgh42dmxPPLuVEANhdIWLVQ==",
   "success": true,
-  "projectFilePath": "H:\\PROGRAMMING 2\\Assignment 1\\Assignment 1\\Assignment 1.csproj",
+  "projectFilePath": "H:\\PROGRAMMING 2\\Programming-assignment-1\\Assignment 1\\Assignment 1\\Assignment 1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BIGGMS1\\.nuget\\packages\\consoletables\\2.5.0\\consoletables.2.5.0.nupkg.sha512"
   ],

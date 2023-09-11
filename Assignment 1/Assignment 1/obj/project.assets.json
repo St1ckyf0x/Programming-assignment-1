@@ -46,11 +46,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\PROGRAMMING 2\\Assignment 1\\Assignment 1\\Assignment 1.csproj",
+      "projectUniqueName": "H:\\PROGRAMMING 2\\Programming-assignment-1\\Assignment 1\\Assignment 1\\Assignment 1.csproj",
       "projectName": "Assignment 1",
-      "projectPath": "H:\\PROGRAMMING 2\\Assignment 1\\Assignment 1\\Assignment 1.csproj",
+      "projectPath": "H:\\PROGRAMMING 2\\Programming-assignment-1\\Assignment 1\\Assignment 1\\Assignment 1.csproj",
       "packagesPath": "C:\\Users\\BIGGMS1\\.nuget\\packages\\",
-      "outputPath": "H:\\PROGRAMMING 2\\Assignment 1\\Assignment 1\\obj\\",
+      "outputPath": "H:\\PROGRAMMING 2\\Programming-assignment-1\\Assignment 1\\Assignment 1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

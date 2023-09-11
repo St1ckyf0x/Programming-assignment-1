@@ -58,13 +58,14 @@ namespace Assignment_1
         {
             Console.WriteLine("Course Details");
             foreach (var course in courses) {
-                Console.WriteLine(course.Name);
+                Console.WriteLine($"{course.Code}: {course.Name}");
+                Console.WriteLine($"{course.Description}, {course.Credits}, {course.Fees}");
             }
             Console.ReadLine();
         }
         public static void marks()
         {
-            Console.WriteLine("All marks");
+            Console.WriteLine("ALL MARKS:");
             foreach (var learner in learners)
             {
                 Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.getAllMarks()));

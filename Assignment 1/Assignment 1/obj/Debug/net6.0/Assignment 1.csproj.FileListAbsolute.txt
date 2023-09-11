@@ -15,3 +15,20 @@ H:\PROGRAMMING 2\Assignment 1\Assignment 1\obj\Debug\net6.0\refint\Assignment 1.
 H:\PROGRAMMING 2\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.pdb
 H:\PROGRAMMING 2\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.genruntimeconfig.cache
 H:\PROGRAMMING 2\Assignment 1\Assignment 1\obj\Debug\net6.0\ref\Assignment 1.dll
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\bin\Debug\net6.0\Assignment 1.exe
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\bin\Debug\net6.0\Assignment 1.deps.json
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\bin\Debug\net6.0\Assignment 1.runtimeconfig.json
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\bin\Debug\net6.0\Assignment 1.dll
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\bin\Debug\net6.0\Assignment 1.pdb
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\bin\Debug\net6.0\ConsoleTables.dll
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.csproj.AssemblyReference.cache
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.GeneratedMSBuildEditorConfig.editorconfig
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.AssemblyInfoInputs.cache
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.AssemblyInfo.cs
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.csproj.CoreCompileInputs.cache
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.csproj.CopyComplete
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.dll
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\refint\Assignment 1.dll
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.pdb
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\Assignment 1.genruntimeconfig.cache
+H:\PROGRAMMING 2\Programming-assignment-1\Assignment 1\Assignment 1\obj\Debug\net6.0\ref\Assignment 1.dll
