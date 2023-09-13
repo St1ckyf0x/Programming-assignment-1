@@ -73,7 +73,7 @@ namespace Assignment_1
             Console.WriteLine("/ALL MARKS/");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",",learner.Id, learner.FirstName, learner.LastName,  learner.CourseAssessmentMark.getAllMarks()));
+                Console.WriteLine($"{learner.Id}, {learner.FirstName}, {learner.LastName}, {string.Join(", ",learner.CourseAssessmentMark.getAllMarks())}");
             }
             Console.ReadLine();
         }
