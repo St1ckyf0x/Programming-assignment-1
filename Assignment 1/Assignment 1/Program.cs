@@ -64,7 +64,7 @@ namespace Assignment_1
             {
                 Console.WriteLine($"{course.Code}: {course.Name}");
                 Institution institution = course.Department.Institution;
-                Console.WriteLine($"Description: {course.Description}, Credits: {course.Credits}, Fee: {course.Fees}, Institution: {institution.Name}, {institution.Region}, {institution.Country}, {course.Department.Name} department");
+                Console.WriteLine($"Description: {course.Description}, Credits: {course.Credits}, Fee: {course.Fees}, Institution: {institution.Name}, {institution.Region}, {institution.Country}, {course.Department.Name} department\n");
             }
             Console.ReadLine();
         }
