@@ -6,7 +6,10 @@ namespace Assignment_1
     {
         private static List<Learner> learners = new List<Learner>();
         private static List<Lecturer> lecturers = new List<Lecturer>();
-        private static List<Course> courses;
+        private static List<Course> courses = new List<Course>();
+        private static List<Institution> institutions = new List<Institution>();
+        private static List<Department> departments = new List<Department>();
+        private static List<CourseAssessmentMark> courseAssessmentMarks = new List<CourseAssessmentMark>();
         static void Main(string[] args)
         {
             Utils.SeedInstitution();
@@ -56,25 +59,27 @@ namespace Assignment_1
         }
         public static void courseDetails()
         {
-            Console.WriteLine("Course Details");
-            foreach (var course in courses) {
+            Console.WriteLine("/COURSE DETAILS/");
+            foreach (var course in courses)
+            {
                 Console.WriteLine($"{course.Code}: {course.Name}");
-                Console.WriteLine($"{course.Description}, {course.Credits}, {course.Fees}");
+                Institution institution = course.Department.Institution;
+                Console.WriteLine($"Description: {course.Description}, Credits: {course.Credits}, Fee: {course.Fees}, Institution: {institution.Name}, {institution.Region}, {institution.Country}, {course.Department.Name} department");
             }
             Console.ReadLine();
         }
         public static void marks()
         {
-            Console.WriteLine("ALL MARKS:");
+            Console.WriteLine("/ALL MARKS/");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.getAllMarks()));
+                Console.WriteLine(string.Join(",",learner.Id, learner.FirstName, learner.LastName,  learner.CourseAssessmentMark.getAllMarks()));
             }
             Console.ReadLine();
         }
         public static void allGrades()
         {
-            Console.WriteLine("All grades");
+            Console.WriteLine("/ALL GRADES/");
             foreach (var learner in learners)
             {
                 Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetAllGrades()));
