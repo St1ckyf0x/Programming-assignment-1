@@ -20,7 +20,7 @@ namespace Assignment_1
             Utils.ReadLecturersFromFile("lecturers.txt", lecturers);
             int userInput;
             Console.Clear();
-            Console.WriteLine("1  Course Details* \n2  Marks* \n3  All Grades* \n4  Highest Marks* \n5 Lowest Marks \n6 Fail Marks \n 7 Average Marks \n 8 Average Grade \n 9 Add Learner \n0  Exit menu system*");
+            Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n0: Exit Management System");
             userInput = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             switch (userInput)
@@ -50,10 +50,10 @@ namespace Assignment_1
                     averageGrades();
                     break;
                 case 9:
-                    addLearner();
+                    addRemoveLearner();
                     break;
                 default:
-                    exit();
+                   // exit();
                     break;
             }
         }
@@ -64,82 +64,128 @@ namespace Assignment_1
             {
                 Console.WriteLine($"{course.Code}: {course.Name}");
                 Institution institution = course.Department.Institution;
-                Console.WriteLine($"Description: {course.Description}, Credits: {course.Credits}, Fee: {course.Fees}, Institution: {institution.Name}, {institution.Region}, {institution.Country}, {course.Department.Name} department\n");
+                Console.WriteLine($"Description: {course.Description}," +
+                    $" Credits: {course.Credits}," +
+                    $" Fee: ${course.Fees}," +
+                    $" Institution: {institution.Name}," +
+                    $" {institution.Region}," +
+                    $" {institution.Country}," +
+                    $" {course.Department.Name} department\n");
             }
             Console.ReadLine();
         }
         public static void marks()
         {
-            Console.WriteLine("/ALL MARKS/");
+            Console.WriteLine("ALL MARKS");
             foreach (var learner in learners)
             {
-                Console.WriteLine($"{learner.Id}, {learner.FirstName}, {learner.LastName}, {string.Join(", ",learner.CourseAssessmentMark.getAllMarks())}");
+                Console.WriteLine($"{learner.Id}: {learner.FirstName}," +
+                    $" {learner.LastName}, " +
+                    $"{learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $"  {string.Join(", ", learner.CourseAssessmentMark.getAllMarks())}");
             }
             Console.ReadLine();
         }
         public static void allGrades()
         {
-            Console.WriteLine("/ALL GRADES/");
+            Console.WriteLine("ALL GRADES");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetAllGrades()));
+                Console.WriteLine($"{learner.Id}:" +
+                    $" {learner.FirstName}," +
+                    $" {learner.LastName}," +
+                    $" {learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $" {string.Join(", ", learner.CourseAssessmentMark.GetAllGrades())}");
             }
             Console.ReadLine();
         }
         public static void highestMarks()
         {
-            Console.WriteLine("Highest marks");
+            Console.WriteLine("HIGHEST MARKS");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetHighestMarks()));
+                Console.WriteLine($"{learner.Id}:" +
+                    $" {learner.FirstName}," +
+                    $" {learner.LastName}," +
+                    $" {learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $" {string.Join(", ", learner.CourseAssessmentMark.GetHighestMarks())}");
             }
             Console.ReadLine();
         }
         public static void lowestMarks()
         {
-            Console.WriteLine("Lowest marks");
+            Console.WriteLine("LOWEST MARKS");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetLowestMarks()));
+                Console.WriteLine($"{learner.Id}:" +
+                    $" {learner.FirstName}," +
+                    $" {learner.LastName}," +
+                    $" {learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $" {string.Join(", ", learner.CourseAssessmentMark.GetLowestMarks())}");
             }
             Console.ReadLine();
         }
         public static void failMarks()
         {
-            Console.WriteLine("Fail marks");
+            Console.WriteLine("FAIL MARKS");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetFailMarks()));
+                Console.WriteLine($"{learner.Id}: " +
+                    $"{learner.FirstName}," +
+                    $" {learner.LastName}," +
+                    $" {learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $" {string.Join(", ", learner.CourseAssessmentMark.GetFailMarks())}");
             }
             Console.ReadLine();
         }
         public static void averageMarks()
         {
-            Console.WriteLine("Average marks");
+            Console.WriteLine("AVERAGE MARKS");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetAverageMarks()));
+                Console.WriteLine($"{learner.Id}:" +
+                    $" {learner.FirstName}," +
+                    $" {learner.LastName}," +
+                    $" {learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $" {string.Join(", ", learner.CourseAssessmentMark.GetAverageMarks())}");
             }
             Console.ReadLine();
         }
         public static void averageGrades()
         {
-            Console.WriteLine("Average grades");
+            Console.WriteLine("AVERAGE GRADES");
             foreach (var learner in learners)
             {
-                Console.WriteLine(string.Join(",", learner.CourseAssessmentMark.GetAverageGrades()));
+                Console.WriteLine($"{learner.Id}:" +
+                    $" {learner.FirstName}," +
+                    $" {learner.LastName}," +
+                    $" {learner.CourseAssessmentMark.Course.Code}:" +
+                    $" {learner.CourseAssessmentMark.Course.Name}:" +
+                    $" {string.Join(", ", learner.CourseAssessmentMark.GetAverageGrades())}");
             }
             Console.ReadLine();
         }
-        public static void addLearner()
+        public static void addRemoveLearner()
         {
-            Console.WriteLine("Enter ");
-            Console.ReadLine();
-        }
-        public static void exit()
-        {
-            Console.WriteLine("Cya!");
-            Console.ReadLine();
+            int userInput;
+            Console.WriteLine("Add/Remove Learner\n1: Add Learner \n2: Remove Learner ");
+            userInput = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            switch (userInput)
+            {
+                case 1:
+                   // addLearner();
+                    break;
+                case 2:
+                   // removeLearner();
+                    break;
+            }
         }
     }
 }

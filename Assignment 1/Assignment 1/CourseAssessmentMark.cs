@@ -11,6 +11,9 @@ namespace Assignment_1
         private Course course;
         private List<int> assessmentMarks;
 
+        public Course Course { get => course; set => course = value; }
+        public List<int> AssessmentMarks { get => assessmentMarks; set => assessmentMarks = value; }
+
         public CourseAssessmentMark(Course course, List<int> assessmentMarks)
         {
             this.course = course;
