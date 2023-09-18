@@ -20,7 +20,7 @@ namespace Assignment_1
             Utils.ReadLecturersFromFile("lecturers.txt", lecturers);
             int userInput;
             Console.Clear();
-            Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n0: Exit Management System");
+            Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n10: Add Lecturer \n0: Exit Management System");
             userInput = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             switch (userInput)
@@ -51,6 +51,9 @@ namespace Assignment_1
                     break;
                 case 9:
                     addRemoveLearner();
+                    break;
+                case 10:
+                    addLecturer();
                     break;
                 default:
                    // exit();
@@ -166,8 +169,7 @@ namespace Assignment_1
                     $" {learner.FirstName}," +
                     $" {learner.LastName}," +
                     $" {learner.CourseAssessmentMark.Course.Code}:" +
-                    $" {learner.CourseAssessmentMark.Course.Name}:" +
-                    $" {string.Join(", ", learner.CourseAssessmentMark.GetAverageGrades())}");
+                    $" {learner.CourseAssessmentMark.Course.Name}: {string.Join(", ", learner.CourseAssessmentMark.GetAverageGrades())}");
             }
             Console.ReadLine();
         }
@@ -180,12 +182,34 @@ namespace Assignment_1
             switch (userInput)
             {
                 case 1:
-                   // addLearner();
+                    addLearner();
                     break;
                 case 2:
-                   // removeLearner();
+                    removeLearner();
                     break;
             }
+        }
+        public static void addLearner()
+        {
+            Console.WriteLine();
+
+            // get first name => check if first name contains numbers/spec chars
+            // get last name
+            // get course = 0, 1, 2 => make sure that the value is either 0, 1 or 2
+            // get you marks => make sure that mark is >= 1 and <= 100
+
+            // create a new Learner
+            // add new Learner to learners list
+
+            // write to file
+        }
+        public static void removeLearner()
+        { 
+            Console.WriteLine();
+        }
+        public static void addLecturer()
+        {
+            Console.WriteLine();
         }
     }
 }
