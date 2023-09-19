@@ -15,50 +15,53 @@ namespace Assignment_1
             Utils.SeedInstitution();
             Utils.SeedDepartment();
             courses = Utils.SeedCoures();
-
             Utils.ReadLearnersFromFile("learners.txt", learners);
             Utils.ReadLecturersFromFile("lecturers.txt", lecturers);
+
             int userInput;
-            Console.Clear();
-            Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n10: Add Lecturer \n0: Exit Management System");
-            userInput = Convert.ToInt32(Console.ReadLine());
-            Console.Clear();
-            switch (userInput)
+            do
             {
-                case 1:
-                    courseDetails();
-                    break;
-                case 2:
-                    marks();
-                    break;
-                case 3:
-                    allGrades();
-                    break;
-                case 4:
-                    highestMarks();
-                    break;
-                case 5:
-                    lowestMarks();
-                    break;
-                case 6:
-                    failMarks();
-                    break;
-                case 7:
-                    averageMarks();
-                    break;
-                case 8:
-                    averageGrades();
-                    break;
-                case 9:
-                    addRemoveLearner();
-                    break;
-                case 10:
-                    addLecturer();
-                    break;
-                default:
-                   // exit();
-                    break;
-            }
+            Console.Clear();
+                Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n10: Add Lecturer \n0: Exit Management System");
+                userInput = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                switch (userInput)
+                {
+                    case 1:
+                        courseDetails();
+                        break;
+                    case 2:
+                        marks();
+                        break;
+                    case 3:
+                        allGrades();
+                        break;
+                    case 4:
+                        highestMarks();
+                        break;
+                    case 5:
+                        lowestMarks();
+                        break;
+                    case 6:
+                        failMarks();
+                        break;
+                    case 7:
+                        averageMarks();
+                        break;
+                    case 8:
+                        averageGrades();
+                        break;
+                    case 9:
+                        addRemoveLearner();
+                        break;
+                    case 10:
+                        addLecturer();
+                        break;
+                    default:
+                        userInput = 0;
+                        break;
+                }
+            } while (userInput != 0);
         }
         public static void courseDetails()
         {
@@ -204,7 +207,7 @@ namespace Assignment_1
             // write to file
         }
         public static void removeLearner()
-        { 
+        {
             Console.WriteLine();
         }
         public static void addLecturer()
