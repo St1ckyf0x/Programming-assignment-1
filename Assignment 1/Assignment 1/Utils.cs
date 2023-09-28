@@ -28,8 +28,8 @@ namespace Assignment_1
         public static List<Course> SeedCoures()
         {
             courses.Add(new Course(departments[0], "IT502", "Bachelor of IT", "Programming/Web", 15, 20000));
-            courses.Add(new Course(departments[1], "IT502", "Bachelor of Fashion", "Fabrics/Design", 15, 10000));
-            courses.Add(new Course(departments[2], "IT502", "Diploma of Gastronomy", "Cooking/Baking", 15, 15000));
+            courses.Add(new Course(departments[1], "IT503", "Bachelor of Fashion", "Fabrics/Design", 15, 10000));
+            courses.Add(new Course(departments[2], "IT504", "Diploma of Gastronomy", "Cooking/Baking", 15, 15000));
             return courses;
         }
         public static void ReadLearnersFromFile(string filePath, List<Learner> learners)

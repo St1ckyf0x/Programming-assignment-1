@@ -55,7 +55,7 @@ namespace Assignment_1
                         addRemoveLearner();
                         break;
                     case 10:
-                        addLecturer();
+                        //addLecturer();
                         break;
                     default:
                         userInput = 0;
@@ -188,7 +188,7 @@ namespace Assignment_1
                     addLearner();
                     break;
                 case 2:
-                    removeLearner();
+                    //removeLearner();
                     break;
             }
         }
@@ -205,14 +205,73 @@ namespace Assignment_1
             // add new Learner to learners list
 
             // write to file
-        }
-        public static void removeLearner()
+            Console.WriteLine("Enter First Name: ");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter Last Name: ");
+            string lastName = Console.ReadLine();
+            Console.WriteLine("Enter Course:");
+            int course = int.Parse(Console.ReadLine());
+
+
+
+            Console.WriteLine("Enter Mark 1: ");
+            int assessementMark1 = int.Parse(Console.ReadLine());
+            if (assessementMark1 < 0 && assessementMark1 > 100)
+            {
+                Console.WriteLine("Please enter a vaild mark: ");
+                assessementMark1 = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter Mark 2: ");
+            int assessementMark2 = int.Parse(Console.ReadLine());
+            if (assessementMark2 < 0 && assessementMark2 > 100)
+            {
+                Console.WriteLine("Please enter a vaild mark: ");
+                assessementMark2 = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter Mark 3: ");
+            int assessementMark3 = int.Parse(Console.ReadLine());
+            if (assessementMark3 < 0 && assessementMark3 > 100)
+            {
+                Console.WriteLine("Please enter a vaild mark: ");
+                assessementMark3 = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter Mark 4: ");
+            int assessementMark4 = int.Parse(Console.ReadLine());
+            if (assessementMark4 < 0 && assessementMark4 > 100)
+            {
+                Console.WriteLine("Please enter a vaild mark: ");
+                assessementMark4 = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter Mark 5: ");
+            int assessementMark5 = int.Parse(Console.ReadLine());
+            if (assessementMark5 < 0 && assessementMark5 > 100)
+            {
+                Console.WriteLine("Please enter a vaild mark: ");
+                assessementMark5 = int.Parse(Console.ReadLine());
+            }
+
+
+            int ID = learners[learners.Count - 1].Id + 1;
+            CourseAssessmentMark courseAssessmentMark = new CourseAssessmentMark(courses[course], new List<int>()
+            {
+                assessementMark1, assessementMark2, assessementMark3, assessementMark4, assessementMark5
+            });
+            Learner learner = new Learner(ID, firstName, lastName, courseAssessmentMark);
+            learners.Add(learner);
+            using (StreamWriter SW = new StreamWriter(@"learners.txt", true))
+            {
+                SW.WriteLine($"{ID},{firstName},{lastName},{course},{assessementMark1},{assessementMark2},{assessementMark3},{assessementMark4},{assessementMark5}");
+            }
+
+
+      //  public static void removeLearner()
         {
             Console.WriteLine();
         }
-        public static void addLecturer()
+       // public static void addLecturer()
         {
             Console.WriteLine();
+        }
         }
     }
 }
