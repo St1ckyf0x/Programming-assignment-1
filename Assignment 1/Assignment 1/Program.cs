@@ -64,7 +64,7 @@ namespace Assignment_1
                 }
             } while (userInput != 0);
         }
-        public static void courseDetails()
+        public static void courseDetails() //displays course details for each course
         {
             Console.WriteLine("/COURSE DETAILS/");
             foreach (var course in courses)
@@ -83,7 +83,7 @@ namespace Assignment_1
         }
         public static void marks()
         {
-            Console.WriteLine("ALL MARKS");
+            Console.WriteLine("ALL MARKS"); //displays all marks for each learner
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}: {learner.FirstName}," +
@@ -94,9 +94,9 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void allGrades()
+        public static void allGrades() //displays all grades for each learner
         {
-            Console.WriteLine("ALL GRADES");
+            Console.WriteLine("ALL GRADES"); 
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -108,9 +108,9 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void highestMarks()
+        public static void highestMarks() //displays the highest marks for each learner
         {
-            Console.WriteLine("HIGHEST MARKS");
+            Console.WriteLine("HIGHEST MARKS"); 
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -122,9 +122,9 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void lowestMarks()
+        public static void lowestMarks() //displays the lowest marks for each learner
         {
-            Console.WriteLine("LOWEST MARKS");
+            Console.WriteLine("LOWEST MARKS"); 
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -136,9 +136,9 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void failMarks()
+        public static void failMarks() //displays marks lower than 50 for each learner
         {
-            Console.WriteLine("FAIL MARKS"); //displays 
+            Console.WriteLine("FAIL MARKS"); 
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}: " +
@@ -150,9 +150,9 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void averageMarks()
+        public static void averageMarks() //displays the average marks for each learner
         {
-            Console.WriteLine("AVERAGE MARKS"); //displays the average marks for each student
+            Console.WriteLine("AVERAGE MARKS"); 
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -164,7 +164,7 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void averageGrades() //displays the average grades of each student
+        public static void averageGrades() //displays the average grades of each learner
         {
             Console.WriteLine("AVERAGE GRADES");
             foreach (var learner in learners)
@@ -177,7 +177,7 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void addRemoveLearner() //sub menu for the add/remove lecturers
+        public static void addRemoveLearner() //sub menu for the add/remove learners
         {
             int userInput;
             Console.WriteLine("Add/Remove Learner\n1: Add Learner \n2: Remove Learner ");
@@ -203,7 +203,7 @@ namespace Assignment_1
             }
             return false;
         }
-        public static void addLearner()
+        public static void addLearner() //add learner function
         {
             Console.WriteLine();
 
@@ -282,7 +282,7 @@ namespace Assignment_1
             }
         }
 
-        public static void removeLearner()
+        public static void removeLearner() //remove learner function
         {
             Console.WriteLine("Please enter the ID of the student you wish to remove: ");
             int input = int.Parse(Console.ReadLine());
@@ -290,9 +290,6 @@ namespace Assignment_1
             if (learnerFound != null)
             {
                 learners.Remove(learnerFound);
-                //use learnerFound id and search the learners list and remove
-                //loop through learners
-                //write each line to text file
             }
             else Console.WriteLine("Not found :(");
         }
