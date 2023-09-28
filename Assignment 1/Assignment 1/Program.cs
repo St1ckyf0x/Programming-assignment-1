@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 
 namespace Assignment_1
 {
@@ -21,8 +22,8 @@ namespace Assignment_1
             int userInput;
             do
             {
-            Console.Clear();
-                Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n10: Add Lecturer \n0: Exit Management System");
+                Console.Clear();
+                Console.WriteLine("STUDENT MANAGEMENT TOOL\n1: Course Details \n2: Marks \n3: All Grades \n4: Highest Marks \n5: Lowest Marks \n6: Fail Marks \n7: Average Marks \n8: Average Grade \n9: Add/Remove Learner \n10:Add Lecturer \n0: Exit Management System");
                 userInput = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
                 switch (userInput)
@@ -137,7 +138,7 @@ namespace Assignment_1
         }
         public static void failMarks()
         {
-            Console.WriteLine("FAIL MARKS");
+            Console.WriteLine("FAIL MARKS"); //displays 
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}: " +
@@ -151,7 +152,7 @@ namespace Assignment_1
         }
         public static void averageMarks()
         {
-            Console.WriteLine("AVERAGE MARKS");
+            Console.WriteLine("AVERAGE MARKS"); //displays the average marks for each student
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -163,7 +164,7 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void averageGrades()
+        public static void averageGrades() //displays the average grades of each student
         {
             Console.WriteLine("AVERAGE GRADES");
             foreach (var learner in learners)
@@ -176,7 +177,7 @@ namespace Assignment_1
             }
             Console.ReadLine();
         }
-        public static void addRemoveLearner()
+        public static void addRemoveLearner() //sub menu for the add/remove lecturers
         {
             int userInput;
             Console.WriteLine("Add/Remove Learner\n1: Add Learner \n2: Remove Learner ");
@@ -188,16 +189,26 @@ namespace Assignment_1
                     addLearner();
                     break;
                 case 2:
-                    //removeLearner();
+                    removeLearner();
                     break;
             }
+        }
+
+        public static bool isValid(string name)
+        {
+            Regex expression = new Regex("^[a-zA-Z]*$");
+            if (expression.IsMatch(name))
+            {
+                return true;
+            }
+            return false;
         }
         public static void addLearner()
         {
             Console.WriteLine();
 
-            // get first name => check if first name contains numbers/spec chars
-            // get last name
+            // get first name - validate it
+            // get last name - validate it
             // get course = 0, 1, 2 => make sure that the value is either 0, 1 or 2
             // get you marks => make sure that mark is >= 1 and <= 100
 
@@ -207,12 +218,20 @@ namespace Assignment_1
             // write to file
             Console.WriteLine("Enter First Name: ");
             string firstName = Console.ReadLine();
+            if (!isValid(firstName))
+            {
+                Console.WriteLine("Please enter first name");
+                firstName = Console.ReadLine();
+            }
             Console.WriteLine("Enter Last Name: ");
             string lastName = Console.ReadLine();
+            if (!isValid(lastName))
+            {
+                Console.WriteLine("Please enter last name");
+                lastName = Console.ReadLine();
+            }
             Console.WriteLine("Enter Course:");
             int course = int.Parse(Console.ReadLine());
-
-
 
             Console.WriteLine("Enter Mark 1: ");
             int assessementMark1 = int.Parse(Console.ReadLine());
@@ -250,7 +269,6 @@ namespace Assignment_1
                 assessementMark5 = int.Parse(Console.ReadLine());
             }
 
-
             int ID = learners[learners.Count - 1].Id + 1;
             CourseAssessmentMark courseAssessmentMark = new CourseAssessmentMark(courses[course], new List<int>()
             {
@@ -262,16 +280,29 @@ namespace Assignment_1
             {
                 SW.WriteLine($"{ID},{firstName},{lastName},{course},{assessementMark1},{assessementMark2},{assessementMark3},{assessementMark4},{assessementMark5}");
             }
+        }
+
+        public static void removeLearner()
+        {
+            Console.WriteLine("Please enter the ID of the student you wish to remove: ");
+            int input = int.Parse(Console.ReadLine());
+            Learner learnerFound = FindItem(input);
+            if (learnerFound != null)
+            {
+                learners.Remove(learnerFound);
+                //use learnerFound id and search the learners list and remove
+                //loop through learners
+                //write each line to text file
+            }
+            else Console.WriteLine("Not found :(");
+        }
 
 
-      //  public static void removeLearner()
+
+        public static Learner FindItem(int id)
         {
-            Console.WriteLine();
-        }
-       // public static void addLecturer()
-        {
-            Console.WriteLine();
-        }
+            return learners.FirstOrDefault(learner => learner.Id == id);
         }
     }
 }
+
