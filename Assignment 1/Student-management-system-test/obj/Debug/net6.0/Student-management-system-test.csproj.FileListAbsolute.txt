@@ -1,0 +1,6 @@
+C:\Users\matth\OneDrive\Desktop\Programming-assignment-1\Assignment 1\Student-management-system-test\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\matth\OneDrive\Desktop\Programming-assignment-1\Assignment 1\Student-management-system-test\obj\Debug\net6.0\Student-management-system-test.csproj.AssemblyReference.cache
+C:\Users\matth\OneDrive\Desktop\Programming-assignment-1\Assignment 1\Student-management-system-test\obj\Debug\net6.0\Student-management-system-test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matth\OneDrive\Desktop\Programming-assignment-1\Assignment 1\Student-management-system-test\obj\Debug\net6.0\Student-management-system-test.AssemblyInfoInputs.cache
+C:\Users\matth\OneDrive\Desktop\Programming-assignment-1\Assignment 1\Student-management-system-test\obj\Debug\net6.0\Student-management-system-test.AssemblyInfo.cs
+C:\Users\matth\OneDrive\Desktop\Programming-assignment-1\Assignment 1\Student-management-system-test\obj\Debug\net6.0\Student-management-system-test.csproj.CoreCompileInputs.cache

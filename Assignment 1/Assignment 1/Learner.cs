@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class Learner : Person
+    public class Learner : Person //class for learner
     {
         private CourseAssessmentMark courseAssessmentMark;
 

@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Assignment_1
 {
-    public class Program
+    public class Program   // the main directory for the menu functions, displaying the information and adding a learner (lecturer unfinished)
     {
         private static List<Learner> learners = new List<Learner>();
         private static List<Lecturer> lecturers = new List<Lecturer>();

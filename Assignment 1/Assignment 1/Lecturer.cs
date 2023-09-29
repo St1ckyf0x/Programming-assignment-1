@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class Lecturer : Person
+    public class Lecturer : Person //lecturer class, sets the position, salary and course of lecturers
     {
         private Position position;
         private Salary salary;

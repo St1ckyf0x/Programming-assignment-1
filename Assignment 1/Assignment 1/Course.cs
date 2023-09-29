@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class Course
+    public class Course //class for courses, sets the code, name, description, credits and fees for each course
     {
         private Department department;
         private string code;

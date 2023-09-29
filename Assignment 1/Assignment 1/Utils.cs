@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public static class Utils
+    public static class Utils //The UTILS directory, has inputs for institution and course, and reads the file with learners and lecturers on it
     {
         private static List<Institution> institutions = new List<Institution>();
         private static List<Department> departments = new List<Department>();

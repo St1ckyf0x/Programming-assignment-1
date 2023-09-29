@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class Department
+    public class Department //class for setting up the institution and name
     {
         private Institution institution;
         private string name;

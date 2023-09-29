@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public enum Position
+    public enum Position //directory for the different positions of lecturers
     {
         LECTURER,
         SENIOR_LECTURER,

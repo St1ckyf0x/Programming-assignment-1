@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class CourseAssessmentMark
+    public class CourseAssessmentMark //Class for course Assessment marks, this class sets up the grades for each level of mark, and affects the highest mark/lowest mark/fail mark/average marks/average grade functions
     {
         private Course course;
         private List<int> assessmentMarks;

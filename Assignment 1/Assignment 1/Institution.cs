@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class Institution
+    public class Institution //class for institution, sets the name, region and country
     {
         private string name;
         private string region;

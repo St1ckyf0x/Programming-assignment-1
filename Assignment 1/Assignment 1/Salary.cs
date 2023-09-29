@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment_1
+namespace Assignment_1 
 {
-    public enum Salary
+    public enum Salary // Salary for each degree of LECTURER
     {
         LECTURER_SALARY = 85000,
         SENIOR_LECTURER_SALARY = 100000,

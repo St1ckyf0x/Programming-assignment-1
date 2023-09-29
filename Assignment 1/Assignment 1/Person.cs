@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    public class Person
+    public class Person //directory for person, setting a learners first name, last name and ID
     {
         protected int id;
         protected string firstName;
