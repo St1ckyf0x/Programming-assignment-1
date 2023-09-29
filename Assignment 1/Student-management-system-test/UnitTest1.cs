@@ -3,7 +3,7 @@ using Assignment_1;
 namespace Student_management_system_test
 {
     [TestClass]
-    public class StudentManagementTestClass
+    public class StudentManagementTestClass //Unfinished Unit testing section
     {
         [TestMethod]
         public void TestInstitutionName()

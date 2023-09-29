@@ -96,7 +96,7 @@ namespace Assignment_1
         }
         public static void allGrades() //displays all grades for each learner
         {
-            Console.WriteLine("ALL GRADES"); 
+            Console.WriteLine("ALL GRADES");
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -110,7 +110,7 @@ namespace Assignment_1
         }
         public static void highestMarks() //displays the highest marks for each learner
         {
-            Console.WriteLine("HIGHEST MARKS"); 
+            Console.WriteLine("HIGHEST MARKS");
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -124,7 +124,7 @@ namespace Assignment_1
         }
         public static void lowestMarks() //displays the lowest marks for each learner
         {
-            Console.WriteLine("LOWEST MARKS"); 
+            Console.WriteLine("LOWEST MARKS");
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
@@ -138,7 +138,7 @@ namespace Assignment_1
         }
         public static void failMarks() //displays marks lower than 50 for each learner
         {
-            Console.WriteLine("FAIL MARKS"); 
+            Console.WriteLine("FAIL MARKS");
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}: " +
@@ -152,7 +152,7 @@ namespace Assignment_1
         }
         public static void averageMarks() //displays the average marks for each learner
         {
-            Console.WriteLine("AVERAGE MARKS"); 
+            Console.WriteLine("AVERAGE MARKS");
             foreach (var learner in learners)
             {
                 Console.WriteLine($"{learner.Id}:" +
